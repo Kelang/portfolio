@@ -11,25 +11,31 @@
 |
 */
 
+Route::get('/', 'PagesController@accueil');
 
-Route::get('/', 'PagesController@home');
-Route::get('apropos', 'PagesController@apropos');
-Route::get('contact', 'PagesController@contact');
-Route::get('projets', 'PagesController@projets');
+Route::get('/apropos' , 'PagesController@apropos');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/contact', 'PagesController@contact');
 
-Route::get('/apropos', function () {
-    return view('apropos');
-});
 
-Route::get('/projets', function () {
-    return view('projects.projets');
-});
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::resource('projets', 'ProjetsController');
+
+/* Route::get('/projets', 'ProjetsController@index');
+
+Route::get('/projets/creer', 'ProjetsController@create');
+
+Route::get('/projets/{projet}', 'ProjetsController@show');
+
+Route::get('/projets/{projet}/edit', 'PagesController@edit');
+
+Route::patch('/projets/{projet', 'PagesController@update');
+
+Route::delete('/projets', 'ProjetsController@destroy');
+
+Route::post('/projets', 'ProjetsController@store');
+
+Route::delete('/projets/{{id}}', 'ProjetsController@delete'); */
+
+
 

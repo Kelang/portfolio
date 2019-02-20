@@ -7,8 +7,8 @@ use App\Project;
 
 class PagesController extends Controller
 {
-    public function home() {
-        return view('welcome');
+    public function accueil() {
+        return view('accueil');
     }
 
     public function apropos() {
@@ -19,12 +19,4 @@ class PagesController extends Controller
         return view('contact');
     }
 
-    public function projets() {
-
-        $projects = Project::all();
-
-        return $projects;
-
-        return view('projets');
-    }
 }
