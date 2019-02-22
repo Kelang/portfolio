@@ -17,7 +17,7 @@ Route::get('/apropos' , 'PagesController@apropos');
 
 Route::get('/contact', 'PagesController@contact');
 
-
+Route::get('/admin', 'HomeController@index');
 
 Route::resource('projets', 'ProjetsController');
 
@@ -39,3 +39,7 @@ Route::delete('/projets/{{id}}', 'ProjetsController@delete'); */
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -1,6 +1,11 @@
 @extends('layout')
 
-
+@section('styles')
+{{HTML::style('css/accueil.css')}}
+@endsection
+@section('componentscript')
+    
+@endsection
 @section('title', 'Accueil')
 
     
