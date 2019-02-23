@@ -1,0 +1,305 @@
+body, html{
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+    background-color: $color__background-main;
+}
+
+main{
+    margin-left: 10em;
+}
+
+/****************Presentation********************/
+.gridPresentation{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    height: 100vh;
+}
+
+#presentation{
+    color: $color__text;
+    font-size: 2em;
+    
+    h1{
+        animation: presentationAnim 1s  forwards;
+        animation-delay: .5s;
+        opacity: 0;
+    }
+}
+
+#portfolio{
+    color: $color__text;
+    align-self: end;
+    text-align: center;
+    margin: 5em 5em 1em 5em;
+    font-size: 2em;
+    animation: arrowAnim 3s ease-in-out  forwards infinite;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes presentationAnim{
+    0%{
+        transform: translateY(10vh);
+    }
+    100%{
+        transform: translateY(5vh);
+        opacity: 1;
+    }
+}
+
+@keyframes arrowAnim{
+    0%{
+        transform: translateY(-5vh);
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+
+/***********************************************/
+
+
+
+
+
+/******************PROJETS*********************/
+
+
+
+  .descriptionProjet{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    opacity: 0;
+    animation: descriptionEntrer .5s  ease-in-out  forwards;
+    padding: 0 1em 1em 1em;
+  }
+
+  @keyframes descriptionEntrer{
+
+    0%{
+        
+    }
+    100%{
+        
+        opacity: 1;
+    }
+  }
+
+
+
+h2{
+    font-size: 4em;
+    color: $color__text;
+    
+    }   
+
+
+#projets{
+    color: $color__text;
+   
+
+  
+
+    .projetLayout{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 500px;
+        align-items: center;
+        margin-bottom: 5em;
+        grid-column-gap: 2em;
+    }
+
+
+    .projetItem{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5em;
+        width: 90%;
+        transition: .5s;
+        cursor: pointer;
+        grid-gap: 0em;
+        h3{
+            color: $color__text;
+            font-size: 2em;
+            align-self: center;
+            padding: 0 0 0 .5em;
+        }
+        
+        .projetImage{
+            background-color: green;
+        }
+    }
+    .projetItem:hover{
+        background-color: $color__text;
+        color: $color__text-projets;
+
+        h3{
+            color: $color__text-projets;
+        }
+    }
+
+    
+
+    .projetInfo{
+        display: grid;
+        width: 25%;
+        grid-template-columns: repeat(2, 1fr);
+        color: $color__text-projets;
+        grid-column-gap: 1em;
+        text-align: center;
+        margin-left: 8em;
+    .projetInfo:hover{
+        color: $color__text;
+    }  
+
+        p{
+            font-size: 1.2em;
+            margin: .5em 0 .5em 0;
+        }
+
+        }
+    }
+
+
+    .projetImage img{
+       height: 300px;
+       transform: translateY(-15vh);
+        
+    }
+
+#media1{
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    
+}
+#media2{
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+}
+
+#media3{
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    
+}
+
+#media1.imageAnim{
+    animation: imageEnter 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#media2.imageAnim{
+    animation: imageEnter 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#media3.imageAnim{
+    animation: imageEnter 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes imageEnter{
+    0%{
+        opacity: 0;
+        transform: translateX(2vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+        
+    }
+
+}
+
+footer{
+    color: $color__text;
+    text-align: center;
+}
+
+
+
+/********************SCROLL BAR*********************/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $color__background-main; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #181818;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #292929;
+  }
+
+
+/**********MEDIA QUERIES********/
+
+
+  @media screen and (max-width: 768px) {
+
+    h2{
+        font-size: 2em;
+    }
+
+    .MenuContainer{
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+        
+        
+    
+        .navContainer{
+            padding-left: 0em;
+            margin: 0 auto;
+        }
+    }
+
+    .projetsGalery{
+        display: none;
+    }
+
+    #presentation{
+        font-size: 1em;
+    }
+
+    #projets{
+        font-size: .5em;
+    }
+
+    main{
+        margin-left: 5em;
+    }
+
+    .gridPresentation{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        height: auto;
+        margin-top: 15em;
+    }
+    
+    #portfolio{
+        margin: 5em 1em 5em -1em;
+    }
+
+    #projets .projetLayout {
+        display: block;
+    }
+
+    }
