@@ -48974,6 +48974,11 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./scripts/BurgerMenu */ "./resources/js/scripts/BurgerMenu.js"); //require('./scripts/modules/application');
+
+
+__webpack_require__(/*! ./scripts/aos */ "./resources/js/scripts/aos.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -48992,9 +48997,11 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var app = new Vue({
-  el: '#app'
+/*
+const app = new Vue({
+   el: '#app'
 });
+*/
 
 /***/ }),
 
@@ -49122,6 +49129,58 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/scripts/BurgerMenu.js":
+/*!********************************************!*\
+  !*** ./resources/js/scripts/BurgerMenu.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+//Animation du bouton burger   
+$("#BurgerMenuWrapper").click(function () {
+  $(".menu").toggleClass("BurgerMenuAnim");
+  $(".navLink").toggleClass("navContentAnim");
+  $('input.checkBurger').prop("checked", !$('input.checkBurger').prop("checked"));
+  $('html').toggleClass("overflowDisable");
+  $('.menuSocial i').toggleClass("navContentAnim"); //Si le bouton checkbox est coché alors on change le width du side menu
+
+  if ($('input.checkBurger').is(':checked')) {
+    $(".MenuContainer").removeClass("MenuAnimSortie");
+    $(".MenuContainer").addClass("MenuAnimEntrer");
+    console.log("COCHER");
+  } //Si le bouton checkbox est décoché alors on change le width du side menu
+  else if ($('input.checkBurger').prop("checked") == false) {
+      $(".MenuContainer").removeClass("MenuAnimEntrer");
+      $(".MenuContainer").addClass("MenuAnimSortie");
+      console.log("DECOCHER");
+    }
+}); //Animation de la presentation des projets 
+
+$('#projet1').hover(function () {
+  $('#media1').toggleClass('imageAnim'); // $('#media1').show();
+});
+$('#projet2').hover(function () {
+  $('#media2').toggleClass('imageAnim'); // $('#media1').show();
+});
+$('#projet3').hover(function () {
+  $('#media3').toggleClass('imageAnim'); // $('#media1').show();
+});
+
+/***/ }),
+
+/***/ "./resources/js/scripts/aos.js":
+/*!*************************************!*\
+  !*** ./resources/js/scripts/aos.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+AOS.init({
+  duration: 1200
+});
 
 /***/ }),
 

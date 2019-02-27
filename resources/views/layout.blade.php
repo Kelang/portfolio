@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="media/favicon.ico"/>
+
+    <!-- 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+ 
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <title>@yield('title', 'Kevin Langlois')</title>
-    @include('style')
-    @include('script')
+    -->
+
 </head>
 
 <body>
@@ -44,4 +54,5 @@
 
     @yield('content')
 </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </html>

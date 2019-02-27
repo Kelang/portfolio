@@ -1,5 +1,5 @@
 /*!
-Theme Name: Travail Pratique 1
+Theme Name: Portfolio
 Author: Kevin Langlois
 Description: Description
 Version: 1.0.0
@@ -35,7 +35,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "normalize";
 
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -53,3 +52,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "layout/layout"; 
 
+@import "layout/contact";
+
+@import "layout/apropos";
+
+@import "layout/accueil";

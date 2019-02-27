@@ -11,35 +11,22 @@
 |
 */
 
+//GENERAL ROUTES FOR ALL USERS
+
 Route::get('/', 'PagesController@accueil');
 
 Route::get('/apropos' , 'PagesController@apropos');
 
 Route::get('/contact', 'PagesController@contact');
 
-Route::get('/admin', 'HomeController@index');
+Route::post('/contact', 'PagesController@nouveauMessage');
 
-Route::resource('projets', 'ProjetsController');
-
-/* Route::get('/projets', 'ProjetsController@index');
-
-Route::get('/projets/creer', 'ProjetsController@create');
-
-Route::get('/projets/{projet}', 'ProjetsController@show');
-
-Route::get('/projets/{projet}/edit', 'PagesController@edit');
-
-Route::patch('/projets/{projet', 'PagesController@update');
-
-Route::delete('/projets', 'ProjetsController@destroy');
-
-Route::post('/projets', 'ProjetsController@store');
-
-Route::delete('/projets/{{id}}', 'ProjetsController@delete'); */
-
-
-
+Route::get('/projet', 'PagesController@show');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//ADMIN ROUTES
+Route::get('/admin', 'HomeController@index');
+Route::resource('/admin/projets', 'ProjetsController');

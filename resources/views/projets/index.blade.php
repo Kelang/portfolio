@@ -11,6 +11,8 @@
 @foreach($projets as $projet)
 <li>
     <a href="/projets/{{$projet->id}}">{{$projet->titre}}</a>
+    <a href="/projets/{{$projet->id}}/edit"><input type="button" value="Edit"></a>
+    
 </li>
     @endforeach
 </ul>

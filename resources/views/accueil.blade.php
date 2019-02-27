@@ -8,24 +8,18 @@
 
     <div class="gridPresentation">
 
-            <div id="presentation">
-                <h1>
-                    <span>Bonjour, je suis </span><br>
-                    <span>Kevin Langlois</span><br>
-                    <span>un développeur web</span><br>
-                    <span>full stack.</span>
-                </h1>
-                
-            </div>
-        
-            <div id="portfolio">
-                <p><i class="fas fa-long-arrow-alt-down"></i></p>
-                
-            </div>
-        
+        <div id="presentation">
+                <span>Bonjour, je suis </span><br>
+                <span>Kevin Langlois</span><br>
+                <span>un développeur web</span><br>
+                <span>full stack.</span>
         </div>
-
-
+    
+        <div id="portfolio">
+            <p><i class="fas fa-long-arrow-alt-down"></i></p>
+        </div>
+    
+    </div>
 
     <section data-aos="fade-up" id="projets">
         <h2>Mes récents projets</h2>

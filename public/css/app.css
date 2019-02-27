@@ -1,5 +1,5 @@
 /*!
-Theme Name: Travail Pratique 1
+Theme Name: Portfolio
 Author: Kevin Langlois
 Description: Description
 Version: 1.0.0
@@ -626,6 +626,7 @@ h6 {
 
 .navContainer {
   padding-left: 2em;
+  padding-top: 1em;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -747,6 +748,180 @@ html {
 
 main {
   margin-left: 10em;
+  overflow-y: hidden;
+}
+
+h1 {
+  color: white;
+  font-size: 6em;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  margin-left: 0em;
+}
+
+.formulaire h1 {
+  color: white;
+  font-size: 6em;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  margin-left: 0em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1.8em;
+  margin-bottom: 4em;
+}
+
+label {
+  font-size: 1.2em;
+  /*font-weight: 100;*/
+  color: #ffffff;
+}
+
+.labelInfos {
+  -webkit-transform: translateY(-4em);
+  transform: translateY(-4em);
+  margin-bottom: 2em;
+}
+
+/*Champs nom et prenom
+****************************************************/
+
+#nomPrenom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#nom {
+  display: flex;
+  flex-direction: column;
+  /*    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;*/
+  /*margin-right: 1em;*/
+  width: 45%;
+}
+
+/****************************Bouton Soumettre***************/
+
+#btnSoumettre {
+  width: 30%;
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: "Nunito", sans-serif;
+  background-color: #161616;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid #161616;
+  border-radius: 50px;
+  padding: 10px 35px;
+  /*font-weight: 600;*/
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+  margin-top: 2em;
+}
+
+#btnSoumettre:hover {
+  color: #161616;
+  background-color: #ffffff;
+}
+
+#prenom {
+  display: flex;
+  flex-direction: column;
+  /*    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;*/
+  /*margin-left: 1em;*/
+  width: 45%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input:focus + label {
+  color: #161616;
+  transition: 0.3s;
+}
+
+#labelTexte {
+  -webkit-transform: translateY(-1.5em);
+  transform: translateY(-1.5em);
+}
+
+input[type=text],
+input[type=email],
+select {
+  border: none;
+  border-bottom: 0.2em solid #ffffff;
+  background-color: #000000;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: #ffffff;
+  /*font-weight: 100;*/
+}
+
+textarea {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
+  resize: none;
+}
+
+.gridIntro {
+  overflow: hidden;
+  margin-right: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gridIntro p {
+  color: #ffffff;
+  font-size: 1.7em;
+  margin: 2em 0 2em 0;
+  line-height: 1.5em;
+}
+
+.gridIntro p:nth-child(1) {
+  grid-column: 1/4;
+  width: 50%;
+}
+
+.gridIntro p:nth-child(2) {
+  grid-column: 2/span 2;
+}
+
+.gridIntro p:nth-child(3) {
+  grid-column: 1/span 1;
+}
+
+.gridCompetences {
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  grid-row-gap: 2em;
+  grid-column-gap: 0em;
+  width: 50%;
+}
+
+.gridCompetences h2 {
+  color: #ffffff;
+  font-size: 3em;
+  margin: 2em 0 2em 0;
+}
+
+.gridCompetences span {
+  margin-bottom: 2em;
 }
 
 /****************Presentation********************/
@@ -760,7 +935,7 @@ main {
 
 #presentation {
   color: #ffffff;
-  font-size: 2em;
+  font-size: 4em;
 }
 
 #presentation h1 {
