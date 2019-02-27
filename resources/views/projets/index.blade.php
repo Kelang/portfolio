@@ -13,6 +13,14 @@
     <a href="/projets/{{$projet->id}}">{{$projet->titre}}</a>
     <a href="/projets/{{$projet->id}}/edit"><input type="button" value="Edit"></a>
     
+
+    <form method ="POST" action="/projets/{{$projet->id}}">
+        {{ csrf_field() }}
+        {{method_field('DELETE')}}
+        <input type="submit" value="Suppression du projet">
+    </form>
+
+    
 </li>
     @endforeach
 </ul>

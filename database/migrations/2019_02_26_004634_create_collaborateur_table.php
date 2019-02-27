@@ -15,8 +15,9 @@ class CreateCollaborateurTable extends Migration
     {
         Schema::create('collaborateurs', function(Blueprint $table){
             $table->increments('id');
-            $table->string('prenom');
-            $table->string('nom');
+            $table->string('prenom',100);
+            $table->string('nom',100);
+            $table->string('site',100);
             $table->timestamps();
         });
     }

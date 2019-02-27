@@ -8,7 +8,8 @@ use App\Project;
 class PagesController extends Controller
 {
     public function accueil() {
-        return view('accueil');
+        $projets = Projet::all();
+        return view('accueil', compact('$projets'));
     }
 
     public function apropos() {

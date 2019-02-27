@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTable extends Migration
+class CreateRelProjetCollab extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('projets', function (Blueprint $table) {
+        Schema::create('rel_projet_collab', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titre',100);
-            $table->text('description', 1000);
-            $table->text('technologies', 100);
+            $table->unsignedInteger('projet_id');
+            $table->foreign('projet_id')->references('id')->on('projets');
+            $table->unsignedInteger('collaborateur_id');
+            $table->foreign('collaborateur_id')->references('id')->on('collaborateurs');
             $table->timestamps();
-            
         });
     }
 
@@ -30,6 +30,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projets');
+        Schema::dropIfExists('rel_projet_collab');
     }
 }

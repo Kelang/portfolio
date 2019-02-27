@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTechnologiesTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateTechnologiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('technologies', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('technologie');
+            $table->binary('img');
+            $table->string('alt',100);
+            $table->unsignedInteger('projet_id');
+            $table->foreign('projet_id')->references('id')->on('projets');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateTechnologiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('technologies');
+        Schema::dropIfExists('images');
     }
 }
