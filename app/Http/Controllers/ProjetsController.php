@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Projet;
+use App\Image;
 
 class ProjetsController extends Controller
 {
@@ -14,8 +15,13 @@ class ProjetsController extends Controller
 
         $projets = Projet::all();
 
+        $technologiesList =Projet::first()->technologies;
 
-        return view('projets.index', compact('projets'));
+        $technologies = explode(',', $technologiesList);
+
+  
+
+        return view('projets.index', compact('projets','technologies'));
     }
 
     public function create(){

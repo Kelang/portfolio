@@ -16,8 +16,11 @@ class CreateProjectsTable extends Migration
         Schema::create('projets', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titre',100);
-            $table->text('description', 1000);
+            $table->text('descriptionAccueil', 1000);
+            $table->text('descriptionPage');
             $table->text('technologies', 100);
+            $table->string('categorie', 100);
+            $table->unsignedInteger('dateCreation');
             $table->timestamps();
             
         });

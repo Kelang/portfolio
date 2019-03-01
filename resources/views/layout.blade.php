@@ -53,6 +53,9 @@
 
 
     @yield('content')
+    <footer>
+        <span>© Kevin Langlois - Portfolio 2019</span>
+    </footer>
 </body>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </html>

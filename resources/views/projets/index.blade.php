@@ -13,6 +13,26 @@
     <a href="/projets/{{$projet->id}}">{{$projet->titre}}</a>
     <a href="/projets/{{$projet->id}}/edit"><input type="button" value="Edit"></a>
     
+    
+    <ul>
+        @foreach($technologies as $technologie)
+        <li>{{$technologie}}</li>
+        @endforeach
+    </ul>
+    
+
+    <div>
+        {{$projet->description}}
+    </div>
+
+    
+    <div>
+        {{$projet->categorie}}
+    </div>
+
+    <div>
+        {{$projet->dateCreation}}
+    </div>
 
     <form method ="POST" action="/projets/{{$projet->id}}">
         {{ csrf_field() }}
