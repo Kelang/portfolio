@@ -13,8 +13,14 @@ class PagesController extends Controller
         return view('accueil', compact('projets'));
     }
 
+    
+
     public function apropos() {
         return view('apropos');
+    }
+
+    public function contact(){
+        return view('contact');
     }
 
 }

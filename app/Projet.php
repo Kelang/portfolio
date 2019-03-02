@@ -6,10 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Projet extends Model
 {
-    protected $fillable = [
-        'titre', 
-        'description',
-        'collaborateurs',
-        'technologies'
-    ];
+    public function collaborateurs(){
+
+        return $this->belongsToMany('App\Collaborateur');
+    }
 }

@@ -17,7 +17,7 @@
 
 <div>
     <label for="description">Description du projet</label>
-<textarea name="description" id="" cols="30" rows="10" >{{$projet->description}}</textarea>
+<textarea name="description" id="" cols="30" rows="10" >{{$projet->descriptionAccueil}}</textarea>
 </div>
     
 <div>

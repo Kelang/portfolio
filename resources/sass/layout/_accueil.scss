@@ -98,7 +98,7 @@ h2{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 500px;
         align-items: center;
-        margin-bottom: 5em;
+        margin-bottom: 1em;
         grid-column-gap: 2em;
     }
 
@@ -109,7 +109,7 @@ h2{
         grid-column-gap: 5em;
         width: 90%;
         transition: .5s;
-        cursor: pointer;
+ //       cursor: pointer;
         grid-gap: 0em;
         h3{
             color: $color__text;
@@ -121,7 +121,41 @@ h2{
         .projetImage{
             background-color: green;
         }
+
+        .descriptionProjet{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            opacity: 0;
+            animation: descriptionEntrer .5s  ease-in-out  forwards;
+            padding: 0 1em 1em 1em;
+            display: none;
+          }
     }
+
+    #projetDescription1.montreDescription{
+        display: block;
+    }
+    #projetDescription2.montreDescription{
+        display: block;
+    }
+    #projetDescription3.montreDescription{
+        display: block;
+    }
+    #projetDescription4.montreDescription{
+        display: block;
+    }
+
+    @keyframes descriptionEntrer{
+        
+        0%{
+            
+        }
+        100%{
+            
+            opacity: 1;
+        }
+      }
+
     .projetItem:hover{
         background-color: $color__text;
         color: $color__text-projets;
@@ -176,7 +210,12 @@ h2{
     text-align: center;
     opacity: 0;
     position: absolute;
-    
+}
+
+#media4{
+    text-align: center;
+    opacity: 0;
+    position: absolute;
 }
 
 #media1.imageAnim{
@@ -190,6 +229,11 @@ h2{
 }
 
 #media3.imageAnim{
+    animation: imageEnter 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#media4.imageAnim{
     animation: imageEnter 1s ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -210,8 +254,31 @@ h2{
 footer{
     color: $color__text;
     text-align: center;
+    overflow-y: hidden;
+    margin-bottom: 1em;
 }
 
+
+#boutonVisiter {
+    width: 30%;
+    padding: .5em;
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+    background-color: #161616;
+    color: #ffffff;
+    cursor: pointer;
+    //margin: 0 auto;
+    border: 2px solid #161616;
+    border-radius: 50px;
+    padding: 10px 35px;
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+   // margin-top: 2em;
+  }
+  
+  #boutonVisiter:hover {
+    color: #161616;
+    background-color: #ffffff;
+  }
 
 
 /********************SCROLL BAR*********************/
@@ -244,19 +311,6 @@ footer{
 
     h2{
         font-size: 2em;
-    }
-
-    .MenuContainer{
-        display: flex;
-        flex-direction: column;
-        font-size: 1em;
-        
-        
-    
-        .navContainer{
-            padding-left: 0em;
-            margin: 0 auto;
-        }
     }
 
     .projetsGalery{

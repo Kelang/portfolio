@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('style')
+
+@endsection
+
 @section('title', 'Projets')
 
     

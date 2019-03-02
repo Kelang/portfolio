@@ -110,7 +110,7 @@ form {
   }
   
   input:focus + label {
-    color: #161616;
+    color: $color__hover-text;
     -webkit-transition: .3s;
     transition: .3s;
   }

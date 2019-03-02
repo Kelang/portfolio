@@ -29,6 +29,7 @@
 $('#projet1').hover(function(){
 
     $('#media1').toggleClass('imageAnim');
+    $('#projetDescription1').toggleClass('montreDescription');
    // $('#media1').show();
 });
 
@@ -36,16 +37,23 @@ $('#projet1').hover(function(){
 $('#projet2').hover(function(){
 
     $('#media2').toggleClass('imageAnim');
+    $('#projetDescription2').toggleClass('montreDescription');
    // $('#media1').show();
 });
 
 $('#projet3').hover(function(){
 
     $('#media3').toggleClass('imageAnim');
+    $('#projetDescription3').toggleClass('montreDescription');
    // $('#media1').show();
 });
 
+$('#projet4').hover(function(){
 
+    $('#media4').toggleClass('imageAnim');
+    $('#projetDescription4').toggleClass('montreDescription');
+   // $('#media1').show();
+});
 
 
 

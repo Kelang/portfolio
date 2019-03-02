@@ -432,10 +432,6 @@ h6 {
 ## Menus
 --------------------------------------------------------------*/
 
-.overflowDisable {
-  overflow: hidden;
-}
-
 /*******************BURGER MENU********************/
 
 #BurgerMenuWrapper {
@@ -515,7 +511,6 @@ h6 {
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   z-index: 5;
   position: fixed;
   -webkit-transform: translateX(-100%);
@@ -552,7 +547,7 @@ h6 {
 }
 
 .MenuContainer .menuSocial i:hover {
-  color: #161616;
+  color: #2e2e2e;
 }
 
 .MenuContainer .menuSocial i.navContentAnim {
@@ -636,7 +631,7 @@ h6 {
 
 .navContainer a {
   text-decoration: none;
-  color: #161616;
+  color: #2e2e2e;
   opacity: 0;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
@@ -730,8 +725,12 @@ h6 {
   }
 
   .MenuContainer .navContainer {
-    padding-left: 0em;
+    padding-left: 1.2em;
     margin: 0 auto;
+  }
+
+  .MenuContainer .menuSocial ul {
+    padding-left: 0em;
   }
 }
 
@@ -849,7 +848,7 @@ button:focus {
 }
 
 input:focus + label {
-  color: #161616;
+  color: #2e2e2e;
   transition: 0.3s;
 }
 
@@ -1050,7 +1049,7 @@ h2 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 500px;
   align-items: center;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   grid-column-gap: 2em;
 }
 
@@ -1060,7 +1059,6 @@ h2 {
   grid-column-gap: 5em;
   width: 90%;
   transition: 0.5s;
-  cursor: pointer;
   grid-gap: 0em;
 }
 
@@ -1073,6 +1071,38 @@ h2 {
 
 #projets .projetItem .projetImage {
   background-color: green;
+}
+
+#projets .projetItem .descriptionProjet {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  opacity: 0;
+  -webkit-animation: descriptionEntrer 0.5s ease-in-out forwards;
+          animation: descriptionEntrer 0.5s ease-in-out forwards;
+  padding: 0 1em 1em 1em;
+  display: none;
+}
+
+#projets #projetDescription1.montreDescription {
+  display: block;
+}
+
+#projets #projetDescription2.montreDescription {
+  display: block;
+}
+
+#projets #projetDescription3.montreDescription {
+  display: block;
+}
+
+#projets #projetDescription4.montreDescription {
+  display: block;
+}
+
+@keyframes descriptionEntrer {
+  100% {
+    opacity: 1;
+  }
 }
 
 #projets .projetItem:hover {
@@ -1127,6 +1157,12 @@ h2 {
   position: absolute;
 }
 
+#media4 {
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+}
+
 #media1.imageAnim {
   -webkit-animation: imageEnter 1s ease-in-out;
           animation: imageEnter 1s ease-in-out;
@@ -1142,6 +1178,13 @@ h2 {
 }
 
 #media3.imageAnim {
+  -webkit-animation: imageEnter 1s ease-in-out;
+          animation: imageEnter 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#media4.imageAnim {
   -webkit-animation: imageEnter 1s ease-in-out;
           animation: imageEnter 1s ease-in-out;
   -webkit-animation-fill-mode: forwards;
@@ -1179,6 +1222,27 @@ h2 {
 footer {
   color: #ffffff;
   text-align: center;
+  overflow-y: hidden;
+  margin-bottom: 1em;
+}
+
+#boutonVisiter {
+  width: 30%;
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: "Nunito", sans-serif;
+  background-color: #161616;
+  color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #161616;
+  border-radius: 50px;
+  padding: 10px 35px;
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+#boutonVisiter:hover {
+  color: #161616;
+  background-color: #ffffff;
 }
 
 /********************SCROLL BAR*********************/
@@ -1214,17 +1278,6 @@ footer {
     font-size: 2em;
   }
 
-  .MenuContainer {
-    display: flex;
-    flex-direction: column;
-    font-size: 1em;
-  }
-
-  .MenuContainer .navContainer {
-    padding-left: 0em;
-    margin: 0 auto;
-  }
-
   .projetsGalery {
     display: none;
   }
@@ -1256,5 +1309,91 @@ footer {
   #projets .projetLayout {
     display: block;
   }
+}
+
+.topImg img {
+  width: 50%;
+}
+
+.galerie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.galerie img {
+  width: 100%;
+  margin: 4em 0 4em 0;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 2em;
+  margin: 1em 0 1em 0;
+}
+
+.collaborateurs {
+  display: inline-block;
+  flex-direction: column;
+  border-left: 0.1em solid #ffffff;
+  border-bottom: 0.1em solid #ffffff;
+  box-sizing: content-box;
+  color: #ffffff;
+}
+
+.collaborateurs li {
+  list-style: none;
+  padding-bottom: 0.5em;
+}
+
+.collaborateurs a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.collaborateurs a:hover {
+  color: #2e2e2e;
+}
+
+#visit {
+  border: 0.2em solid #ffffff;
+  color: #ffffff;
+  width: 10em;
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding: 1em 3em 1em 3em;
+  margin-bottom: 2em;
+}
+
+#visit a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+#visit:hover {
+  background-color: #ffffff;
+}
+
+#visit:hover a {
+  color: #000000;
+  cursor: pointer;
+}
+
+.technologies {
+  color: #ffffff;
+  margin: 2em 0 2em 0;
+}
+
+.technologies span {
+  margin: 2em 2em 2em 0;
+}
+
+.description {
+  color: #ffffff;
+  width: 75%;
+  font-size: 2em;
+  line-height: 1.5em;
 }
 

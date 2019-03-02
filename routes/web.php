@@ -19,14 +19,12 @@ Route::get('/apropos' , 'PagesController@apropos');
 
 Route::get('/contact', 'PagesController@contact');
 
-Route::post('/contact', 'PagesController@nouveauMessage');
-
-Route::get('/projet', 'PagesController@show');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//ADMIN ROUTES
+//ADMIN ROUTES 1 controller pour Admin
 Route::get('/admin', 'HomeController@index');
-Route::resource('/admin/projets', 'ProjetsController');
+
+Route::resource('projets', 'ProjetsController');

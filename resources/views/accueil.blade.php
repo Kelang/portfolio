@@ -1,6 +1,10 @@
 @extends('layout')
 
 
+@section('style')
+
+@endsection
+
 
 @section('content')
     
@@ -8,11 +12,11 @@
 
     <div class="gridPresentation">
 
-        <div id="presentation">
-                <span>Bonjour, je suis </span><br>
-                <span>Kevin Langlois</span><br>
-                <span>un développeur web</span><br>
-                <span>full stack.</span>
+        <div id="presentation" data-aos="fade-up">
+            <span>Bonjour, je suis </span><br>
+            <span>Kevin Langlois</span><br>
+            <span>un développeur web</span><br>
+            <span>full stack.</span>
         </div>
     
         <div id="portfolio">
@@ -25,60 +29,35 @@
         <h2>Mes récents projets</h2>
         <div class="projetLayout">
             <div class="projetsList">
-                <div class="projetItem" id="projet1">
-                    <h3>Le Fol Espoir</h3>
-                    <div class="projetInfo">
-                        <p>Catégorie</p>
-                        <p>Année</p>
-                        <p>Site web</p>
-                        <p>2018</p>
-                    </div>
-                </div>
-                <div class="projetItem" id="projet2">
-                    <h3>Conquête Royale</h3>
-                    <div class="projetInfo">
-                            <p>Catégorie</p>
-                            <p>Année</p>
-                            <p>Animation</p>
-                            <p>2018</p>
-                        </div>
-                </div>
 
-                <div class="projetItem" id="projet3">
-                        <h3>Conquête Royale (Jeu)</h3>
-                        <div class="projetInfo">
-                                <p>Catégorie</p>
-                                <p>Année</p>
-                                <p>Jeu</p>
-                                <p>2018</p>
-                            </div>
-                    </div>
-                    
+            @foreach($projets as $projet)
+            <div class="projetItem" id="projet{{$projet->id}}">
+                 <h3>{{$projet->titre}}</h3>
+                <div class="projetInfo">
+                    <p>Catégorie</p>
+                    <p>Année</p>
+                    <p>{{$projet->categorie}}</p>
+                    <p>{{$projet->dateCreation}}</p>
+                </div>
+            <section id="projetDescription{{$projet->id}}" class="descriptionProjet">
+                <p>{{$projet->descriptionAccueil}}</p>
+                <a href="/projets/{{$projet->id}}"><input type="button" value="Visiter" id="boutonVisiter"></a>
+            </section>
+
             </div>
+            @endforeach         
+            </div>
+            
             <div class="projetsGalery">
-
-                    <div class="projetImage">
-                        <div id="media1">
-                                <img src="media/projets/folEspoir.png" alt="">
-                        </div>
-                        
-                    </div>
-                    <div class="projetImage">
-                        <div id="media2">
-                                <img src="media/projets/filmImg.jpg" alt="">
-                        </div>
-                        
-                    </div>
-                    <div class="projetImage">
-                            <div id="media3">
-                                    <img src="media/projets/jeu.png" alt="">
-                            </div>
-                            
-                        </div>
+            @foreach($projets as $projet)
+                <div class="projetImage">
+                    <div id="media{{$projet->id}}">
+                        <img src="media/projets/{{$projet->id}}.png" alt="">
+                    </div>  
                 </div>
-
-
-
+            @endforeach 
+            </div>
+                          
         </div>
     </section>
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Projet;
+use App\Collaborateur;
 use App\Image;
 
 class ProjetsController extends Controller
@@ -31,7 +32,15 @@ class ProjetsController extends Controller
 
     public function show(Projet $projet) {
 
-        return view('projets.show', compact('projet'));
+        
+        $technologiesList =$projet->technologies;
+
+        $technologies = explode(',', $technologiesList);
+
+        $collaborateurs = projet::find($projet->id)->collaborateurs;
+
+
+        return view('projets.show', compact('projet', 'technologies', 'collaborateurs'));
     }
 
     public function edit(Projet $projet) {
@@ -66,5 +75,18 @@ class ProjetsController extends Controller
 
 
         return redirect('/projets');
+    }
+
+    public function adminProjets(){
+
+        $projets = Projet::all();
+
+        $technologiesList =Projet::first()->technologies;
+
+        $technologies = explode(',', $technologiesList);
+
+  
+
+        return view('projetLayout', compact('projets','technologies'));
     }
 }
