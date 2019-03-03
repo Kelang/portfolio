@@ -81,17 +81,18 @@
 
 
 
-h2{
-    font-size: 4em;
-    color: $color__text;
-    }   
+  
 
 
 #projets{
     color: $color__text;
    
 
-  
+    h2{
+        font-size: 4em;
+        color: $color__text;
+        } 
+
 
     .projetLayout{
         display: grid;

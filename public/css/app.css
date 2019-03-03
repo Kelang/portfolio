@@ -1035,12 +1035,12 @@ textarea {
   }
 }
 
-h2 {
-  font-size: 4em;
+#projets {
   color: #ffffff;
 }
 
-#projets {
+#projets h2 {
+  font-size: 4em;
   color: #ffffff;
 }
 
@@ -1318,12 +1318,17 @@ footer {
 .galerie {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .galerie img {
-  width: 75%;
+  width: 90%;
   margin: 4em 0 4em 0;
+}
+
+.galerie video {
+  width: 90%;
+  height: 90%;
+  margin: 0 0 1em 0;
 }
 
 h2 {
@@ -1392,8 +1397,9 @@ h2 {
 
 .description {
   color: #ffffff;
-  width: 75%;
-  font-size: 2em;
+  width: 90%;
+  font-size: 1.8em;
   line-height: 1.5em;
+  text-align: justify;
 }
 
