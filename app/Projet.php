@@ -10,4 +10,9 @@ class Projet extends Model
 
         return $this->belongsToMany('App\Collaborateur');
     }
+
+    public function images(){
+
+        return $this->hasMany('App\Image');
+    }
 }

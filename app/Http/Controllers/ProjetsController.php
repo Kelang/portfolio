@@ -39,8 +39,11 @@ class ProjetsController extends Controller
 
         $collaborateurs = projet::find($projet->id)->collaborateurs;
 
+        $images = $projet->images;
 
-        return view('projets.show', compact('projet', 'technologies', 'collaborateurs'));
+        
+
+        return view('projets.show', compact('projet', 'technologies', 'collaborateurs', 'images'));
     }
 
     public function edit(Projet $projet) {
