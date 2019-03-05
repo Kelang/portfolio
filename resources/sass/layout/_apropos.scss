@@ -34,7 +34,7 @@
     grid-row-gap: 2em;
     grid-column-gap: 0em;
     width: 50%;
-
+    margin: 0 auto;
     h2{
         color: #ffffff;
         font-size: 3em;
@@ -45,4 +45,30 @@
 }
 .gridCompetences span{
     margin-bottom: 2em;
+}
+
+.comps{
+    text-align: center;
+    overflow-y: hidden;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .gridIntro{
+        overflow: hidden;
+        margin-right: 2em;
+        display: flex;
+        flex-direction: column;
+    
+        
+        p:nth-child(n){
+            width: 100%;
+        }
+    }
+
+    .gridCompetences{
+        grid-column-gap: 5em;
+    }
+    
 }

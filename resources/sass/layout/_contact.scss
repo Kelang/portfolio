@@ -1,26 +1,20 @@
 .formulaire{
-    h1{
-        color: white;
-        font-size: 6em;
-        margin-top: .5em;
-        margin-bottom: .7em;
-        margin-left: 0em;
-    }
-}
-form {
+  margin: 0 auto;
+
+  form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 50%;
-    margin: 0 auto;
+    //margin: 0 auto;
     margin-top: 1.8em;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
   }
-  
+}
   label {
     font-size: 1.2em;
     /*font-weight: 100;*/
@@ -137,5 +131,23 @@ form {
     font-family: 'Nunito', sans-serif;
     font-size: 1.2em;
     resize: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    
+    
+    .formulaire form {
+      width: auto;
+      margin-right: 3em;
+      
+      #btnSoumettre{
+        width: auto;
+    }
+
+    textarea{
+      height: 10em;
+    }
+    }
+    
   }
   

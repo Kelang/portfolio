@@ -9,44 +9,25 @@
     
 
 @section('content')
+<main>
     <h1>Mes projets</h1>
-    <a href="/projets/create"><input type="button" value="Ajouter un projet"></a>
-<ul>
-@foreach($projets as $projet)
-<li>
-    <a href="/projets/{{$projet->id}}">{{$projet->titre}}</a>
-    <a href="/projets/{{$projet->id}}/edit"><input type="button" value="Edit"></a>
-    
-    
-    <ul>
-        @foreach($technologies as $technologie)
-        <li>{{$technologie}}</li>
+    <a href="/projets/create"><input class="boutonAdmin" type="button" value="Ajouter un projet"></a>
+    <div class="adminList">
+    @foreach($projets as $projet)
+    <div class="adminListItems">
+        <a id="title" href="/projets/{{$projet->id}}">{{$projet->titre}}</a>
+
+        <div id="boutonActions">
+        <a href="/projets/{{$projet->id}}/edit"><input class="boutonAdmin" type="button" value="Edit"></a>
+        
+        <form method ="POST" action="/projets/{{$projet->id}}">
+            {{ csrf_field() }}
+            {{method_field('DELETE')}}
+            <input type="submit" id="boutonDelete" value="Suppression du projet">
+        </form>
+    </div>
+    </div>
         @endforeach
-    </ul>
-    
-
-    <div>
-        {{$projet->description}}
     </div>
-
-    
-    <div>
-        {{$projet->categorie}}
-    </div>
-
-    <div>
-        {{$projet->dateCreation}}
-    </div>
-
-    <form method ="POST" action="/projets/{{$projet->id}}">
-        {{ csrf_field() }}
-        {{method_field('DELETE')}}
-        <input type="submit" value="Suppression du projet">
-    </form>
-
-    
-</li>
-    @endforeach
-</ul>
-
+</main>
 @endsection 

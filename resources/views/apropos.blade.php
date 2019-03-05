@@ -13,6 +13,8 @@
         <p data-aos="fade-left">Ce portfolio est entre autre créé dans le cadre d'un projet de recherche sommatif de ma technique. Le back-end est réalisé à l'aide du cadriciel PHP Laravel et le front-end est fait grâce à du JS, jQuery. Le design a été réalisé avec HTML & CSS.</p>
         <p data-aos="fade-right">Mon portfolio est encore en construction et dans les semaines à venir je vais y intégrer d'autre éléments à mesure que j'acquiers plus de connaissances avec le cadriciel Laravel comme une interface administrateur afin de pouvoir gérer l'ajout de nouveaux projets.</p>
     </div>
+</main>
+<div class="comps">
     <h2 data-aos="fade-up">Compétences</h2>
     <div class="gridCompetences" data-aos="fade-up">
             
@@ -27,5 +29,5 @@
         <span>GIT</span>
         <span>Unity C#</span>
     </div>
-</main>
+</div>
 @endsection

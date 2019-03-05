@@ -19,12 +19,12 @@ Route::get('/apropos' , 'PagesController@apropos');
 
 Route::get('/contact', 'PagesController@contact');
 
+Route::resource('/projets', 'ProjetsController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 //ADMIN ROUTES 1 controller pour Admin
-Route::get('/admin', 'HomeController@index');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::resource('projets', 'ProjetsController');
+

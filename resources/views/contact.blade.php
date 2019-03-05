@@ -4,8 +4,8 @@
 
 @section('content')
 <main>
+    <h1 data-aos="fade-down">Contact</h1>
     <div class="formulaire">
-        <h1 data-aos="fade-down">Contact</h1>
         <form action="/contact" method="POST" data-aos="fade-up">
         {{ csrf_field() }}
                 <div id='nomPrenom'>
@@ -25,7 +25,7 @@
                         <textarea name="message" id="" cols="90" rows="5"></textarea>
                 </div>
                 
-                <input  type=button name=cmd id='btnSoumettre' class='.hvr-radial-out' value=Envoyer>
+                <input  type=submit name=cmd id='btnSoumettre' class='.hvr-radial-out' value=Envoyer>
         </form>
     </div>
 </main>

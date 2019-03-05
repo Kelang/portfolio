@@ -27,7 +27,7 @@
             <div>
             <nav class="navContainer">
                 <a class="navLink souligner" href="/">Accueil</a>
-                <a class="navLink souligner" href="/projets">Projets</a>
+            <!--    <a class="navLink souligner" href="/projets">Projets</a> -->
                 <a class="navLink souligner" href="/apropos">À propos</a>
                 <a class="navLink souligner" href="/contact">Contact</a>
             </nav>

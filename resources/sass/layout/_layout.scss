@@ -16,3 +16,11 @@ h1{
     margin-bottom: 0.7em;
     margin-left: 0em;
 }
+
+
+@media screen and (max-width: 768px) {
+
+    h1{
+        font-size: 4em;
+    }
+}

@@ -110,7 +110,7 @@
         grid-column-gap: 5em;
         width: 90%;
         transition: .5s;
- //       cursor: pointer;
+        cursor: default;
         grid-gap: 0em;
         h3{
             color: $color__text;
@@ -310,24 +310,9 @@ footer{
 
   @media screen and (max-width: 768px) {
 
-    h2{
-        font-size: 2em;
-    }
-
-    .projetsGalery{
-        display: none;
-    }
-
-    #presentation{
-        font-size: 1em;
-    }
-
-    #projets{
-        font-size: .5em;
-    }
-
     main{
         margin-left: 5em;
+        
     }
 
     .gridPresentation{
@@ -335,15 +320,96 @@ footer{
         grid-template-columns: 1fr;
         align-items: center;
         height: auto;
-        margin-top: 15em;
+        margin-top: 19em;
     }
-    
+
+
+    #presentation{
+        font-size: 2em;
+        width: 100%;
+    }
+
     #portfolio{
+        color: $color__text;
+        text-align: center;
+        align-self: center;
         margin: 5em 1em 5em -1em;
+        font-size: 2em;
     }
 
-    #projets .projetLayout {
-        display: block;
-    }
+    #projets{
+        color: $color__text;
+       height: 100vh;
+    
+        h2{
+            font-size: 2em;
+            margin-bottom: 6em;
+            } 
+            
+            img{
+                display: none;
+            }
+    
+        .projetLayout{
+            display: grid;
+            grid-template-columns:  1fr;
+            grid-template-rows: 500px;
+            align-items: center;
+            margin-bottom: 1em;
+            grid-column-gap: 2em;
+        }
+    
+    
+        .projetItem{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 5em;
+            width: 90%;
+            transition: .5s;
+            cursor: default;
+            grid-gap: 0em;
+            h3{
+                color: $color__text;
+                font-size: 1.5em;
+                align-self: center;
+                padding: .5em;
+            }
+            
+    
+            .descriptionProjet{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                opacity: 0;
+                animation: descriptionEntrer .5s  ease-in-out  forwards;
+                padding: 0 1em 1em 1em;
+                display: none;
+
+                #boutonVisiter{
+                    width: auto;
+                }
+              }
+        }
+
+        .projetInfo{
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            color: $color__text-projets;
+            grid-column-gap: 0em;
+            text-align: center;
+            margin-left: 0em;
+        .projetInfo:hover{
+            color: $color__text;
+        }  
+    
+            p{
+                font-size: 1.2em;
+                margin: .5em 0 .5em 0;
+            }
+    
+            }
+
 
     }
+
+  }

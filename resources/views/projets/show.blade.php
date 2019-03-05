@@ -17,7 +17,7 @@
             <ul>
                 @foreach($collaborateurs as $collaborateur)
                 <li>
-                <a href="{{$collaborateur->site}}">{{$collaborateur->prenom}} {{$collaborateur->nom}}</a>
+                <a href="{{$collaborateur->site}}" target="_blank">{{$collaborateur->prenom}} {{$collaborateur->nom}}</a>
                 </li>
                 @endforeach
 

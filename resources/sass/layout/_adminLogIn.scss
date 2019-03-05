@@ -1,0 +1,31 @@
+#app{
+    
+    margin-top: 25vh;
+    margin-left: 25vw;
+
+    main{
+
+    }
+    a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+.formulaireLogin{
+    display: inline-block;
+    background: #080808;
+    padding: 3em;
+    border-radius: 5%;
+    input{
+        margin: 1em 0 1em 0;
+        
+    }
+
+    input:not([type='checkbox']) {    
+        width: 100%;
+    }
+}
+#btnSoumettre{
+    width: 100%;
+    margin-bottom: 1em;
+}
+}

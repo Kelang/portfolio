@@ -511,6 +511,7 @@ h6 {
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   z-index: 5;
   position: fixed;
   -webkit-transform: translateX(-100%);
@@ -621,7 +622,7 @@ h6 {
 
 .navContainer {
   padding-left: 2em;
-  padding-top: 1em;
+  padding-top: 2.4em;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -732,6 +733,30 @@ h6 {
   .MenuContainer .menuSocial ul {
     padding-left: 0em;
   }
+
+  .MenuContainer .menuSocial {
+    align-self: end;
+  }
+
+  .MenuContainer .menuSocial ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .MenuContainer .menuSocial i {
+    font-size: 4em;
+    margin: 0em 1em 0em 1em;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    opacity: 0;
+    transition: opacity;
+  }
+
+  .MenuContainer .menuSocial i:hover {
+    color: #2e2e2e;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -758,21 +783,22 @@ h1 {
   margin-left: 0em;
 }
 
-.formulaire h1 {
-  color: white;
-  font-size: 6em;
-  margin-top: 0.5em;
-  margin-bottom: 0.7em;
-  margin-left: 0em;
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4em;
+  }
 }
 
-form {
+.formulaire {
+  margin: 0 auto;
+}
+
+.formulaire form {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 0 auto;
   margin-top: 1.8em;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 
 label {
@@ -876,6 +902,21 @@ textarea {
   resize: none;
 }
 
+@media screen and (max-width: 768px) {
+  .formulaire form {
+    width: auto;
+    margin-right: 3em;
+  }
+
+  .formulaire form #btnSoumettre {
+    width: auto;
+  }
+
+  .formulaire form textarea {
+    height: 10em;
+  }
+}
+
 .gridIntro {
   overflow: hidden;
   margin-right: 2em;
@@ -911,6 +952,7 @@ textarea {
   grid-row-gap: 2em;
   grid-column-gap: 0em;
   width: 50%;
+  margin: 0 auto;
 }
 
 .gridCompetences h2 {
@@ -921,6 +963,28 @@ textarea {
 
 .gridCompetences span {
   margin-bottom: 2em;
+}
+
+.comps {
+  text-align: center;
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .gridIntro {
+    overflow: hidden;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gridIntro p:nth-child(n) {
+    width: 100%;
+  }
+
+  .gridCompetences {
+    grid-column-gap: 5em;
+  }
 }
 
 /****************Presentation********************/
@@ -1059,6 +1123,7 @@ textarea {
   grid-column-gap: 5em;
   width: 90%;
   transition: 0.5s;
+  cursor: default;
   grid-gap: 0em;
 }
 
@@ -1274,22 +1339,6 @@ footer {
 /**********MEDIA QUERIES********/
 
 @media screen and (max-width: 768px) {
-  h2 {
-    font-size: 2em;
-  }
-
-  .projetsGalery {
-    display: none;
-  }
-
-  #presentation {
-    font-size: 1em;
-  }
-
-  #projets {
-    font-size: 0.5em;
-  }
-
   main {
     margin-left: 5em;
   }
@@ -1299,15 +1348,93 @@ footer {
     grid-template-columns: 1fr;
     align-items: center;
     height: auto;
-    margin-top: 15em;
+    margin-top: 19em;
+  }
+
+  #presentation {
+    font-size: 2em;
+    width: 100%;
   }
 
   #portfolio {
+    color: #ffffff;
+    text-align: center;
+    align-self: center;
     margin: 5em 1em 5em -1em;
+    font-size: 2em;
+  }
+
+  #projets {
+    color: #ffffff;
+    height: 100vh;
+  }
+
+  #projets h2 {
+    font-size: 2em;
+    margin-bottom: 6em;
+  }
+
+  #projets img {
+    display: none;
   }
 
   #projets .projetLayout {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px;
+    align-items: center;
+    margin-bottom: 1em;
+    grid-column-gap: 2em;
+  }
+
+  #projets .projetItem {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 5em;
+    width: 90%;
+    transition: 0.5s;
+    cursor: default;
+    grid-gap: 0em;
+  }
+
+  #projets .projetItem h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    align-self: center;
+    padding: 0.5em;
+  }
+
+  #projets .projetItem .descriptionProjet {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    opacity: 0;
+    -webkit-animation: descriptionEntrer 0.5s ease-in-out forwards;
+            animation: descriptionEntrer 0.5s ease-in-out forwards;
+    padding: 0 1em 1em 1em;
+    display: none;
+  }
+
+  #projets .projetItem .descriptionProjet #boutonVisiter {
+    width: auto;
+  }
+
+  #projets .projetInfo {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    color: #000000;
+    grid-column-gap: 0em;
+    text-align: center;
+    margin-left: 0em;
+  }
+
+  #projets .projetInfo .projetInfo:hover {
+    color: #ffffff;
+  }
+
+  #projets .projetInfo p {
+    font-size: 1.2em;
+    margin: 0.5em 0 0.5em 0;
   }
 }
 
@@ -1401,5 +1528,99 @@ h2 {
   font-size: 1.8em;
   line-height: 1.5em;
   text-align: justify;
+}
+
+.boutonAdmin {
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: "Nunito", sans-serif;
+  background-color: #161616;
+  color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #161616;
+  border-radius: 50px;
+  padding: 10px 35px;
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.boutonAdmin:hover {
+  color: #161616;
+  background-color: #ffffff;
+}
+
+#boutonDelete {
+  font-size: 1em;
+  font-family: "Nunito", sans-serif;
+  background-color: #161616;
+  color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #161616;
+  border-radius: 50px;
+  padding: 10px 10px 10px 10px;
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+#boutonDelete:hover {
+  color: #161616;
+  background-color: #ffffff;
+}
+
+.adminListItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  margin: 2em 0 2em 0;
+}
+
+.adminList {
+  margin-bottom: 5em;
+}
+
+.adminList #title {
+  text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+#boutonActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0em;
+}
+
+.formField {
+  margin: 1em 0 1em 0;
+}
+
+#app {
+  margin-top: 25vh;
+  margin-left: 25vw;
+}
+
+#app a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#app .formulaireLogin {
+  display: inline-block;
+  background: #080808;
+  padding: 3em;
+  border-radius: 5%;
+}
+
+#app .formulaireLogin input {
+  margin: 1em 0 1em 0;
+}
+
+#app .formulaireLogin input:not([type=checkbox]) {
+  width: 100%;
+}
+
+#app #btnSoumettre {
+  width: 100%;
+  margin-bottom: 1em;
 }
 

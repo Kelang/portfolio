@@ -10,7 +10,12 @@ use App\Image;
 
 class ProjetsController extends Controller
 {
-    //
+    public function __construct(){
+
+        $this->middleware('auth')->except(['show']);
+    }
+
+
     public function index(){
 
 
@@ -80,16 +85,5 @@ class ProjetsController extends Controller
         return redirect('/projets');
     }
 
-    public function adminProjets(){
 
-        $projets = Projet::all();
-
-        $technologiesList =Projet::first()->technologies;
-
-        $technologies = explode(',', $technologiesList);
-
-  
-
-        return view('projetLayout', compact('projets','technologies'));
-    }
 }
