@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div id="burgerMenuBar"></div>
     <div id="BurgerMenuWrapper">
             <div class="BurgerMenu menu">
                 <input type="checkbox" class="checkBurger">
