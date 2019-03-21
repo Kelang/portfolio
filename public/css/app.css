@@ -1025,6 +1025,10 @@ textarea {
   opacity: 0;
 }
 
+#parallax-container {
+  position: absolute;
+}
+
 #portfolio {
   color: #ffffff;
   align-self: end;
@@ -1095,20 +1099,23 @@ textarea {
 #svg1 {
   position: absolute;
   margin: 1.5em 0 0 5em;
+  opacity: 0.4;
 }
 
 #svg2 {
-  position: absolute;
+  position: fixed;
   margin: 20em 0 0 50em;
+  opacity: 0.2;
 }
 
 #svg3 {
-  position: absolute;
-  margin: 6em 0 0 32em;
+  position: fixed;
+  margin: 6em 0 0 39em;
+  opacity: 0.7;
 }
 
 #svg4 {
-  position: absolute;
+  position: fixed;
   margin: 35em 0 0 20em;
 }
 

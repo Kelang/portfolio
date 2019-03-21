@@ -48979,6 +48979,8 @@ __webpack_require__(/*! ./scripts/BurgerMenu */ "./resources/js/scripts/BurgerMe
 
 __webpack_require__(/*! ./scripts/aos */ "./resources/js/scripts/aos.js");
 
+__webpack_require__(/*! ./scripts/parallax */ "./resources/js/scripts/parallax.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49188,6 +49190,25 @@ $('#projet4').hover(function () {
 AOS.init({
   duration: 1200
 });
+
+/***/ }),
+
+/***/ "./resources/js/scripts/parallax.js":
+/*!******************************************!*\
+  !*** ./resources/js/scripts/parallax.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener('scroll', function () {
+  var parent = document.getElementById('parallax-container');
+  var children = parent.getElementsByTagName('svg');
+  console.log(children);
+
+  for (var i = 0; i < children.length; i++) {
+    children[i].style.transform = 'translateY(+' + window.pageYOffset * 0.5 * i / children.length + 'px)';
+  }
+}, false);
 
 /***/ }),
 

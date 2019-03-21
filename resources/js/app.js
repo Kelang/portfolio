@@ -9,6 +9,7 @@ require('./bootstrap');
 require('./scripts/BurgerMenu');
 //require('./scripts/modules/application');
 require('./scripts/aos');
+require('./scripts/parallax');
 
 window.Vue = require('vue');
 
