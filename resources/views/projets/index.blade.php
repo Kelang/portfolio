@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('admin_layout')
 
 @section('style')
 
@@ -20,7 +20,7 @@
         <div id="boutonActions">
         <a href="/projets/{{$projet->id}}/edit"><input class="boutonAdmin" type="button" value="Edit"></a>
         
-        <form method ="POST" action="/projets/{{$projet->id}}">
+        <form method ="POST" action="/projets/{{$projet->id}}" class="deleteProjet">
             {{ csrf_field() }}
             {{method_field('DELETE')}}
             <input type="submit" id="boutonDelete" value="Suppression du projet">
@@ -28,6 +28,17 @@
     </div>
     </div>
         @endforeach
+    </div>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{{ route('logout') }}"
+           onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
     </div>
 </main>
 @endsection 

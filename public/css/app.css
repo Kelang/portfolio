@@ -738,7 +738,7 @@ h6 {
   #burgerMenuBar {
     z-index: 100;
     width: 100%;
-    background-color: orange;
+    background-color: #161616;
     position: fixed;
     height: 4em;
   }
@@ -802,7 +802,9 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 4em;
+    font-size: 2.5em;
+    margin-top: 2em;
+    text-align: center;
   }
 }
 
@@ -921,7 +923,9 @@ textarea {
 @media screen and (max-width: 768px) {
   .formulaire form {
     width: auto;
-    margin-right: 3em;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 5em;
   }
 
   .formulaire form #btnSoumettre {
@@ -989,9 +993,11 @@ textarea {
 @media screen and (max-width: 768px) {
   .gridIntro {
     overflow: hidden;
-    margin-right: 2em;
+    margin-right: 0em;
+    margin-left: 1.2em;
     display: flex;
     flex-direction: column;
+    font-size: 1.2em;
   }
 
   .gridIntro p:nth-child(n) {
@@ -999,7 +1005,8 @@ textarea {
   }
 
   .gridCompetences {
-    grid-column-gap: 5em;
+    grid-column-gap: 7em;
+    width: 100%;
   }
 }
 
@@ -1154,7 +1161,6 @@ textarea {
 #projets .projetLayout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px;
   align-items: center;
   margin-bottom: 1em;
   grid-column-gap: 2em;
@@ -1204,6 +1210,22 @@ textarea {
 }
 
 #projets #projetDescription4.montreDescription {
+  display: block;
+}
+
+#projets #projetDescription5.montreDescription {
+  display: block;
+}
+
+#projets #projetDescription6.montreDescription {
+  display: block;
+}
+
+#projets #projetDescription7.montreDescription {
+  display: block;
+}
+
+#projets #projetDescription8.montreDescription {
   display: block;
 }
 
@@ -1330,7 +1352,6 @@ textarea {
 footer {
   color: #ffffff;
   text-align: center;
-  overflow-y: hidden;
   margin-bottom: 1em;
 }
 
@@ -1386,7 +1407,6 @@ footer {
     margin-left: 0em;
     margin-right: 0em;
     justify-content: center;
-    overflow-x: hidden;
   }
 
   .gridPresentation {
@@ -1401,7 +1421,7 @@ footer {
     font-size: 2em;
     width: 100%;
     margin-top: 8em;
-    margin-left: 1em;
+    margin-left: 1.5em;
     margin-right: 1em;
   }
 
@@ -1414,7 +1434,6 @@ footer {
 
   #projets {
     color: #ffffff;
-    margin-bottom: 10em;
   }
 
   #projets h2 {
@@ -1495,17 +1514,17 @@ footer {
 
   #svg2 {
     position: absolute;
-    margin: 2em 0 0 5em;
+    margin: 2em 0 0 15em;
   }
 
   #svg3 {
     position: absolute;
-    margin: 6em 0 0 4em;
+    margin: 6em 0 0 10em;
   }
 
   #svg4 {
     position: absolute;
-    margin: 5em 0 0 4em;
+    margin: 25em 0 0 4em;
   }
 }
 
@@ -1599,6 +1618,58 @@ h2 {
   font-size: 1.8em;
   line-height: 1.5em;
   text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .technologies {
+    margin: 2em 1em 2em 2em;
+  }
+
+  .technologies span {
+    margin: 2em 2em 2em 0;
+  }
+
+  .topImg img {
+    width: 90%;
+    margin-left: 1.2em;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .collaborateurs {
+    border-left: none;
+    border-bottom: 0.1em solid #ffffff;
+    margin-left: 5em;
+    padding: 0em;
+  }
+
+  .collaborateurs ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 1.2em;
+    margin: 0 0em 0 1em;
+  }
+
+  .galerie {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .galerie img {
+    width: 100%;
+    margin: 2em 1em 2em 0em;
+  }
+
+  .galerie video {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0em 0;
+  }
 }
 
 .boutonAdmin {

@@ -25,6 +25,6 @@ Auth::routes();
 
 
 //ADMIN ROUTES 1 controller pour Admin
-Route::get('home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');
 
 

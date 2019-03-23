@@ -27,16 +27,9 @@
         <div id="side-menu" class="MenuContainer ">
             <div>
             <nav class="navContainer">
-                <a class="navLink souligner" href="/">Accueil</a>
-                <a class="navLink souligner" href="/apropos">À propos</a>
-                <a class="navLink souligner" href="/contact">Contact</a>
+                <a class="navLink souligner" href="/projets">Liste des projets</a>
+                <a class="navLink souligner" href="/projets/create">Creer</a>
             </nav>
-            </div>
-            <div class="menuSocial">
-                <ul class="social">
-                    <li class="socialItem"><a href="https://www.linkedin.com/in/k-langlois"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="socialItem"><a href="https://github.com/Kelang"><i class="fab fa-github"></i></a></li>
-                </ul>
             </div>
     
         </div>

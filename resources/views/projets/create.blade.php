@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('admin_layout')
 
 @section('title', 'Nouveau Projet')
 
@@ -11,22 +11,32 @@
         {{ csrf_field() }}
     <div class="formField">
         <label for="titre" class='labelInfos'>Titre du projet</label>
-    <input type="text" name="titre" id="" value="{{old('titre')}}">
+    <input type="text" name="titre" id="" value="{{old('titre')}}"  size="75">
     </div>
 
     <div class="formField">
-        <label for="collaborateurs" class='labelInfos'>Collaborateurs</label>
-    <input type="text" name="collaborateurs" id="" value="{{old('collaborateurs')}}">
+        <label for="descriptionAccueil" class='labelInfos'>Description Accueil</label>
+    <textarea name="descriptionAccueil" id="" cols="30" rows="10">{{old('descriptionAccueil')}}</textarea>
     </div>
 
     <div class="formField">
-        <label for="description" class='labelInfos'>Description du projet</label>
-    <textarea name="description" id="" cols="30" rows="10">{{old('description')}}</textarea>
+        <label for="descriptionPage" class='labelInfos'>Description Projet</label>
+    <textarea name="descriptionPage" id="" cols="30" rows="10">{{old('descriptionPage')}}</textarea>
     </div>
         
     <div class="formField">
         <label for="technologies" class='labelInfos'>Technologies employées</label>
-    <input type="text" name="technologies" id="" value="{{old('technologies')}}">
+    <input type="text" name="technologies" id="" value="{{old('technologies')}}" size="75">
+    </div>
+
+    <div class="formField">
+        <label for="categorie" class='labelInfos'  size="35">Catégorie du projet</label>
+    <input type="text" name="categorie" id="" value="{{old('categorie')}}" size="75">
+    </div>
+
+    <div class="formField">
+        <label for="dateCreation" class='labelInfos'  size="35">Année de création du projet</label>
+    <input type="text" name="dateCreation" id="" value="{{old('dateCreation')}}" size="75">
     </div>
 
     <div>

@@ -65,7 +65,7 @@ class ProjetsController extends Controller
     public function update(Projet $projet) {
 
        
-        $projet->update(request(['titre', 'description', 'collaborateurs', 'technologies']));
+        $projet->update(request(['titre', 'descriptionAccueil', 'descriptionPage', 'technologies','categorie','dateCreation']));
 
         return redirect('/projets');
     }
@@ -74,9 +74,11 @@ class ProjetsController extends Controller
         
        $attributes = request()->validate([
             'titre'=> ['required', 'min:3', 'max:255'],
-            'description'=> ['required', 'min:3'],
-            'collaborateurs'=>['required', 'min:3'],
-            'technologies'=> ['required', 'min:3']
+            'descriptionAccueil'=> ['required', 'min:3'],
+            'descriptionPage'=>['required', 'min:3'],
+            'technologies'=> ['required', 'min:3'],
+            'categorie'=>['required', 'min:3'],
+            'dateCreation'=>['required', 'min:3']
         ]);
 
         Projet::create($attributes);

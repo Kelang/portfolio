@@ -38,7 +38,7 @@
             <span>Bonjour, je suis </span><br>
             <span>Kevin Langlois</span><br>
             <span>un développeur web</span><br>
-            <span>full stack.</span>
+            <span>junior.</span>
         </div>
     
         <div id="portfolio">
@@ -84,6 +84,4 @@
     </section>
 
 </main>
-<footer></footer>
-
 @endsection

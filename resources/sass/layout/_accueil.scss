@@ -123,7 +123,7 @@
     .projetLayout{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 500px;
+        //grid-template-rows: 500px;
         align-items: center;
         margin-bottom: 1em;
         grid-column-gap: 2em;
@@ -169,6 +169,18 @@
         display: block;
     }
     #projetDescription4.montreDescription{
+        display: block;
+    }
+    #projetDescription5.montreDescription{
+        display: block;
+    }
+    #projetDescription6.montreDescription{
+        display: block;
+    }
+    #projetDescription7.montreDescription{
+        display: block;
+    }
+    #projetDescription8.montreDescription{
         display: block;
     }
 
@@ -281,7 +293,7 @@
 footer{
     color: $color__text;
     text-align: center;
-    overflow-y: hidden;
+    //overflow-y: hidden;
     margin-bottom: 1em;
 }
 
@@ -340,7 +352,7 @@ footer{
         margin-left: 0em;
         margin-right: 0em;
         justify-content: center;
-        overflow-x: hidden;
+       // overflow-x: hidden;
     }
 
     .gridPresentation{
@@ -356,7 +368,7 @@ footer{
         font-size: 2em;
         width: 100%;
         margin-top: 8em;
-        margin-left: 1em;
+        margin-left: 1.5em;
         margin-right: 1em;
     }
 
@@ -370,7 +382,7 @@ footer{
 
     #projets{
         color: $color__text;
-        margin-bottom: 10em;
+       // margin-bottom: 10em;
     
         h2{
             font-size: 2em;
@@ -453,17 +465,17 @@ footer{
     
     #svg2{
         position: absolute;
-        margin: 2em 0 0 5em;
+        margin: 2em 0 0 15em;
     }
     
     #svg3{
         position: absolute;
-        margin: 6em 0 0 4em;
+        margin: 6em 0 0 10em;
     }
     
     #svg4{
         position: absolute;
-        margin: 5em 0 0 4em;
+        margin: 25em 0 0 4em;
     }
 
   }

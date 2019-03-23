@@ -49151,31 +49151,31 @@ $("#BurgerMenuWrapper").click(function () {
 
   if ($('input.checkBurger').is(':checked')) {
     $(".MenuContainer").removeClass("MenuAnimSortie");
-    $(".MenuContainer").addClass("MenuAnimEntrer");
-    console.log("COCHER");
+    $(".MenuContainer").addClass("MenuAnimEntrer"); //console.log("COCHER");
   } //Si le bouton checkbox est décoché alors on change le width du side menu
   else if ($('input.checkBurger').prop("checked") == false) {
       $(".MenuContainer").removeClass("MenuAnimEntrer");
-      $(".MenuContainer").addClass("MenuAnimSortie");
-      console.log("DECOCHER");
+      $(".MenuContainer").addClass("MenuAnimSortie"); // console.log("DECOCHER");
     }
 }); //Animation de la presentation des projets 
 
-$('#projet1').hover(function () {
-  $('#media1').toggleClass('imageAnim');
-  $('#projetDescription1').toggleClass('montreDescription'); // $('#media1').show();
+window.addEventListener("load", function () {
+  var container = document.getElementsByClassName("projetsList");
+  var projetEnfant = document.getElementsByClassName("projetItem"); //console.log(projetEnfant);
+
+  var _loop = function _loop(i) {
+    $("#projet" + i).hover(function () {
+      $("#media" + i).toggleClass('imageAnim');
+      $("#projetDescription" + i).toggleClass('montreDescription');
+    });
+  };
+
+  for (var i = 0; i <= projetEnfant.length; i++) {
+    _loop(i);
+  }
 });
-$('#projet2').hover(function () {
-  $('#media2').toggleClass('imageAnim');
-  $('#projetDescription2').toggleClass('montreDescription'); // $('#media1').show();
-});
-$('#projet3').hover(function () {
-  $('#media3').toggleClass('imageAnim');
-  $('#projetDescription3').toggleClass('montreDescription'); // $('#media1').show();
-});
-$('#projet4').hover(function () {
-  $('#media4').toggleClass('imageAnim');
-  $('#projetDescription4').toggleClass('montreDescription'); // $('#media1').show();
+$(".deleteProjet").on("submit", function () {
+  return confirm("Êtes-vous certain?");
 });
 
 /***/ }),
@@ -49203,7 +49203,6 @@ AOS.init({
 window.addEventListener('scroll', function () {
   var parent = document.getElementById('parallax-container');
   var children = parent.getElementsByTagName('svg');
-  console.log(children);
 
   for (var i = 0; i < children.length; i++) {
     children[i].style.transform = 'translateY(+' + window.pageYOffset * 0.5 * i / children.length + 'px)';
