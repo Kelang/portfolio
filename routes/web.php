@@ -19,6 +19,8 @@ Route::get('/apropos' , 'PagesController@apropos');
 
 Route::get('/contact', 'PagesController@contact');
 
+Route::post('/contact', 'PagesController@envoyer');
+
 Route::resource('/projets', 'ProjetsController');
 
 Auth::routes();

@@ -35,10 +35,10 @@
                 @if($image->type == 'image')
                 <img data-aos="fade-up" src="/{{$image->chemin}}" alt="{{$image->alt}}">
                 @elseif($image->type == 'video')
-                <video controls>
-                    <source src="/{{$image->chemin}}" type="video/mp4">
-                    Votre navigateur ne supporte pas la lecture video.
-                </video>
+                <div class="youtubeVideo">
+                    <iframe width="800" height="600" src="{{$image->chemin}}" frameborder="0" allowfullscreen>
+                </iframe>
+                </div>
                 @endif
             @endforeach
             </div>
