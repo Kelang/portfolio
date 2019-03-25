@@ -11,7 +11,7 @@
 |
 */
 
-//GENERAL ROUTES FOR ALL USERS
+//Routes generales
 
 Route::get('/', 'PagesController@accueil');
 
@@ -26,7 +26,8 @@ Route::resource('/projets', 'ProjetsController');
 Auth::routes();
 
 
-//ADMIN ROUTES 1 controller pour Admin
+//Route pour le controller admin et authentification
 Route::get('/admin', 'HomeController@index')->name('home');
+
 
 

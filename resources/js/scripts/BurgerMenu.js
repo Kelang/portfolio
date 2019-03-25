@@ -45,7 +45,7 @@ window.addEventListener("load", function (){
 
 });
 
-
+//Confirmation de suppression de projet
 $(".deleteProjet").on("submit", function(){
     return confirm("Êtes-vous certain?");
   });

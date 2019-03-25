@@ -1,11 +1,5 @@
 @extends('layout')
 
-
-@section('style')
-
-@endsection
-
-
 @section('content')
     
 <main>

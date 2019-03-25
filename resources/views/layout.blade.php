@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Kevin Langlois." />
+    <meta name="author" content="Kevin Langlois">
+    <meta name="keywords" content="Kevin Langlois,développeur web,front-end,back-end, HTML,CSS,JavaScript,Laravel">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="/media/favicon.ico"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

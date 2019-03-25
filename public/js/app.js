@@ -49173,7 +49173,8 @@ window.addEventListener("load", function () {
   for (var i = 0; i <= projetEnfant.length; i++) {
     _loop(i);
   }
-});
+}); //Confirmation de suppression de projet
+
 $(".deleteProjet").on("submit", function () {
   return confirm("Êtes-vous certain?");
 });

@@ -35,10 +35,10 @@
                 @if($image->type == 'image')
                 <img data-aos="fade-up" src="/{{$image->chemin}}" alt="{{$image->alt}}">
                 @elseif($image->type == 'video')
-                <div class="youtubeVideo">
-                    <iframe width="800" height="600" src="{{$image->chemin}}" frameborder="0" allowfullscreen>
-                </iframe>
-                </div>
+                <video controls>
+                    <source src="/{{$image->chemin}}" type="video/mp4">
+                  </video>
+
                 @endif
             @endforeach
             </div>

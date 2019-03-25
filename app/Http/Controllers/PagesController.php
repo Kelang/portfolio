@@ -33,20 +33,7 @@ class PagesController extends Controller
                                     'prenom' =>'min:2',
                                     'telephone' => 'min:3'
                                    ]);
-         /*                           
-        $data = array(
-            'email' => $request->email,
-            'bodyMessage' => $request->message,
-            'nom' => $request->nom,
-            'prenom'=>$request->prenom,
-            'telephone'=>$request->telephone
-        );
-
-        Mail::send('emails.contact-created',$data, function($message) use ($data){
-            $message->from($data['email']);
-            $message->to('k.langlois001@gmail.com');
-            $message->subject('Nouveau Contact');
-        });*/
+        
 
         Mail::to('k.langlois001@gmail.com')->send(new ContactCreated($request));
 

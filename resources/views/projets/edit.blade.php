@@ -3,6 +3,7 @@
 @section('content')
 <main>
     <h1 data-aos="fade-down">Modifier</h1>
+    <div class="formulaire">
     <form method="POST" action="/projets/{{$projet->id}}">
         {{ csrf_field() }}
         {{method_field('PATCH')}}
@@ -16,14 +17,14 @@
     <input type="text" name="collaborateurs" id="" value="{{$projet->collaborateurs}}" size="75">
     </div>
 
-    <div>
+    <div class="formField">
         <label for="descriptionAccueil">Description Accueil</label>
-    <textarea name="descriptionAccueil" id="" cols="10" rows="10" >{{$projet->descriptionAccueil}}</textarea>
+    <textarea name="descriptionAccueil" id="" cols="30" rows="10" >{{$projet->descriptionAccueil}}</textarea>
     </div>
 
-    <div>
+    <div class="formField">
         <label for="descriptionPage">Description Projet</label>
-        <textarea name="descriptionPage" id="" cols="10" rows="10" >{{$projet->descriptionPage}}</textarea>
+        <textarea name="descriptionPage" id="" cols="30" rows="10" >{{$projet->descriptionPage}}</textarea>
         </div>
         
     <div>
@@ -42,5 +43,6 @@
         {{method_field('DELETE')}}
         <input class="boutonAdmin" type="submit" value="Suppression du projet">
     </form>
+    </div>
 </main>
 @endsection

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" type="image/png" href="/media/favicon.ico"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -28,7 +29,7 @@
             <div>
             <nav class="navContainer">
                 <a class="navLink souligner" href="/projets">Liste des projets</a>
-                <a class="navLink souligner" href="/projets/create">Creer</a>
+                <a class="navLink souligner" href="/projets/create">Créer</a>
             </nav>
             </div>
     
